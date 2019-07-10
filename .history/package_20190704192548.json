@@ -24,9 +24,7 @@
   },
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "server": "cross-env NODE_ENV=test nodemon --exec babel-node server.js"
-    
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "antd-mobile": "^2.2.13",

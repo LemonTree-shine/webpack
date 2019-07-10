@@ -11,7 +11,6 @@ export default class A extends Component{
         super()
     }
     handleClick = ()=>{
-        
         alert(123);
     }
 
