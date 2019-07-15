@@ -2,7 +2,6 @@ var express = require("express");
 var path = require("path");
 var ejs = require("ejs");
 var fs = require("fs");
-
 import {renderToString,renderToStaticMarkup} from "react-dom/server";
 import React,{Component} from "react";
 import A from "./page/a";
@@ -22,6 +21,12 @@ app.get("/index",function(req,res){
 });
 
 app.use(express.static(path.join(__dirname,'dist')));
+
+app.get('*', function (request, response){
+    response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+})
+
+
 
 app.listen("9999",function(){
     console.log("run at 9999")

@@ -13,7 +13,7 @@ module.exports = {
     entry:"./src/index.js",   //入口文件
     output:{
         filename:"bundle.js",  //打包输出文件
-        //publicPath:"http://www.xiaogangji.com/",
+        publicPath:"//localhost:9999/",
         path:path.resolve(__dirname,"dist")  //必须是一个绝对路径
     },
     module:{

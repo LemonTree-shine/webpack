@@ -26,7 +26,6 @@
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "server": "cross-env NODE_ENV=test nodemon --exec babel-node server.js"
-    
   },
   "dependencies": {
     "antd-mobile": "^2.2.13",
@@ -34,6 +33,7 @@
     "express": "^4.17.1",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   }
 }

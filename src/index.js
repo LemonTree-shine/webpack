@@ -1,14 +1,21 @@
-//require("../style/a.css");
-//require("../style/b.less");
 import "../style/a.css"
 import "../style/b.less"
-console.log("asdasdsadasdasd");
 import React, { Component } from "react";
 import ReactDom from "react-dom";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
 
 import A from "../page/a.jsx";
 
-ReactDom.render(<A />,
+ReactDom.render(<Router>
+    <Route exact path="/" component={A}/>
+    <Route exact path="/user" render={()=>{
+        return <div>qweqweqwe</div>
+    }}/>
+</Router>,
     document.getElementById("contain"),
     () => {
         //回调
