@@ -8,8 +8,8 @@ import {
     Link
   } from 'react-router-dom';
 
-import A from "../page/a.jsx";
-import B from "../page/b.jsx";
+import A from "@page/a";
+import B from "@page/b";
 
 ReactDom.render(<Router>
     <Route exact path="/" component={A}/>

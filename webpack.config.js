@@ -16,6 +16,7 @@ module.exports = {
         publicPath:"//localhost:9999/",
         path:path.resolve(__dirname,"dist")  //必须是一个绝对路径
     },
+    //loader配置
     module:{
         rules:[{
             test:/\.css$/,
@@ -46,6 +47,14 @@ module.exports = {
 			},
             exclude:/node_modules/
         }]
+    },
+    //别名处理
+    resolve:{
+        alias:{
+            "@root":path.resolve(__dirname),
+            "@page":path.resolve(__dirname,'page'),  //必须时绝对路径
+        },
+        extensions: ['.js','.jsx','.ts','.tsx'],
     },
     plugins:[
         new HtmlWebpackPlugin({
