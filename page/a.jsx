@@ -16,7 +16,7 @@ export default class A extends Component{
     }
 
     componentDidMount(){
-        Toast.info("asdasdas",1);
+        //Toast.info("asdasdas",1);
     }
 }
 

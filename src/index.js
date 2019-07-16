@@ -9,12 +9,14 @@ import {
   } from 'react-router-dom';
 
 import A from "../page/a.jsx";
+import B from "../page/b.jsx";
 
 ReactDom.render(<Router>
     <Route exact path="/" component={A}/>
     <Route exact path="/user" render={()=>{
         return <div>qweqweqwe</div>
     }}/>
+    <Route exact path="/b" component={B}/>
 </Router>,
     document.getElementById("contain"),
     () => {

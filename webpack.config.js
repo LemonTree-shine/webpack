@@ -34,7 +34,7 @@ module.exports = {
                 {loader:"postcss-loader"},
             ]
         },{
-            test:/(\.js|\.jsx)$/,
+            test:/(\.js|\.jsx|\.ts|\.tsx)$/,
             use: {
 				loader:'babel-loader',
 				options: {
