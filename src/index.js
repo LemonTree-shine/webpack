@@ -1,5 +1,3 @@
-import "../style/a.css"
-import "../style/b.less"
 import React, { Component } from "react";
 import ReactDom from "react-dom";
 import {
@@ -9,14 +7,9 @@ import {
   } from 'react-router-dom';
 
 import A from "@page/a";
-import B from "@page/b";
 
 ReactDom.render(<Router>
-    <Route exact path="/" component={A}/>
-    <Route exact path="/user" render={()=>{
-        return <div>qweqweqwe</div>
-    }}/>
-    <Route exact path="/b" component={B}/>
+    <Route exact path="/index" component={A}/>
 </Router>,
     document.getElementById("contain"),
     () => {

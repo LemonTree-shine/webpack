@@ -48,12 +48,13 @@ module.exports = {
             exclude:/node_modules/
         }]
     },
-    //别名处理
     resolve:{
+        //别名处理
         alias:{
             "@root":path.resolve(__dirname),
             "@page":path.resolve(__dirname,'page'),  //必须时绝对路径
         },
+        //扩展名处理
         extensions: ['.js','.jsx','.ts','.tsx'],
     },
     plugins:[
