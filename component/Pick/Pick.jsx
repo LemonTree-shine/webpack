@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./Pick.less"
+import "./Pick.less";
+import "./Pick.css"
 
 export default class Pick extends React.Component{
     render(){
@@ -106,23 +107,26 @@ export default class Pick extends React.Component{
 
     //关闭弹窗的方法
     close = ()=>{
-        var transTime = 180;
+        var transTime = 300;
 
         if(this.mode==="up"){
             var box = document.querySelector(".c-content-trans");
             var paddingHeight = box.offsetHeight;
-            box.style.transform = `translateY(${paddingHeight}px)`;
+            setTimeout(()=>{
+                box.style.transform = `translateY(100%)`;
+            },0)
+            
         }else if(this.mode==="left"){
             var box = document.querySelector(".c-content-trans-left");
             box.style.transform = "translateX(-100%)";
-            transTime = 250; 
+            transTime = 330; 
         }else if(this.mode==="right"){
             var box = document.querySelector(".c-content-trans-right");
             box.style.transform = "translateX(100%)";
-            transTime = 250; 
+            transTime = 330; 
         }
 
-        box.style.transition = "transform .15s"
+        box.style.transition = "transform .2s"
         
         setTimeout(()=>{
             this.dialogElem.parentNode.remove();
