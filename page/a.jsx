@@ -19,7 +19,13 @@ export default class A extends Component{
     constructor(){
         super()
     }
+    componentDidMount(){
+        console.log(this.props);
+    }
     handleClick = ()=>{
+        console.log(this.props);
+        this.props.history.push("/c")
+        return
         var pick = new Pick();
         pick.show("大标题","小标题",<div>内容<br/>内容</div>,"class-dialog",{
             //mask:false,

@@ -9,11 +9,13 @@ import {
 import {ContextTheme,Provider,connect} from "../../rexio/index";
 
 import A from "@page/a";
+import C from "@page/c";
 
 ReactDom.render(
-<Provider value={{name:"chenze111"}}>
+<Provider value={{name:"chenze111",adress:"杭州"}}>
     <Router>
         <Route exact path="/index" component={A}/>
+        <Route exact path="/c" component={C}/>
     </Router>
 </Provider>
 ,
