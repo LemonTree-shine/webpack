@@ -15,7 +15,7 @@ ReactDom.render(
 <Provider value={{name:"chenze111",adress:"杭州"}}>
     <Router>
         <Route exact path="/index" component={A}/>
-        <Route exact path="/c" component={C}/>
+        {/* <Route exact path="/c" component={C}/> */}
     </Router>
 </Provider>
 ,

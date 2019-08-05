@@ -12,15 +12,15 @@ import A from "./page/a";
 var app = express();
 
 
-app.get("/index",function(req,res){
+// app.get("/index",function(req,res){
 
-    var modelContent = fs.readFileSync("dist/index.html");
-    var __html = renderToStaticMarkup(<A/>);
+//     var modelContent = fs.readFileSync("dist/index.html");
+//     var __html = renderToStaticMarkup(<A/>);
 
-    var content = modelContent.toString().replace(`<div id="contain"></div>`,`<div id="contain">${__html}</div>`);
+//     var content = modelContent.toString().replace(`<div id="contain"></div>`,`<div id="contain">${__html}</div>`);
 
-    res.send(content)
-});
+//     res.send(content)
+// });
 
 app.use(express.static(path.join(__dirname,'dist')));
 
